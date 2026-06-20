@@ -92,18 +92,6 @@
   </div>
 </div>
 
-<!-- 🟢 AR VIEW -->
-<div id="arView">
-  <button class="backBtn" onclick="goHome()">← Back</button>
-
-  <model-viewer
-    src="https://raw.githubusercontent.com/jairosclarkson-arch/ar-project/main/Guidaben.glb"
-    ar
-    ar-modes="scene-viewer webxr quick-look"
-    camera-controls
-    auto-rotate>
-  </model-viewer>
-</div>
 
 <script>
   function openAR() {
@@ -111,10 +99,9 @@
     document.getElementById("arView").style.display = "block";
   }
 
-  function goHome() {
-    document.getElementById("arView").style.display = "none";
-    document.getElementById("home").style.display = "flex";
-  }
+  function openAR() {
+  window.location.href = "https://arvr.google.com/scene-viewer/1.0?file=https%3A%2F%2Fraw.githubusercontent.com%2Fjairosclarkson-arch%2Far-project%2Fmain%2FGuidaben.glb&mode=ar_preferred";
+}
 </script>
 
 </body>
